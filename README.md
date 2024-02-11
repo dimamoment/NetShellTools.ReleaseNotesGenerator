@@ -1,0 +1,1 @@
+# NetShellTools.ReleaseNotesGenerator
