@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <AssemblyName>NetShellTools.ReleaseNotesGenerator.OpenAI.Service</AssemblyName>
+        <RootNamespace>NetShellTools.ReleaseNotesGenerator.OpenAI.Service</RootNamespace>
+        <Company>NetShellTools</Company>
+        <Product>NetShellTools.ReleaseNotesGenerator</Product>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        
+    </ItemGroup>
+
+</Project>

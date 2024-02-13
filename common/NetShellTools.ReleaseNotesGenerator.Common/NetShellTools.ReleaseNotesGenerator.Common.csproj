@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <AssemblyName>NetShellTools.ReleaseNotesGenerator.Common</AssemblyName>
+        <RootNamespace>NetShellTools.ReleaseNotesGenerator.Common</RootNamespace>
+        <Company>NetShellTools</Company>
+        <Product>NetShellTools.ReleaseNotesGenerator</Product>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+</Project>
