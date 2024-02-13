@@ -4,7 +4,7 @@ namespace NetShellTools.ReleaseNotesGenerator.PTS.Service.Controllers;
 
 [ApiController]
 [Route("api/azure-devops")]
-internal sealed class AzureDevopsController
+public sealed class AzureDevopsController
 {
     private readonly ILogger<AzureDevopsController> _logger;
     

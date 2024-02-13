@@ -5,7 +5,7 @@ namespace NetShellTools.ReleaseNotesGenerator.ApiGateway.Controller;
 
 [ApiController]
 [Route("api/release-notes")]
-internal sealed class ReleaseNotesController : ControllerBase
+public sealed class ReleaseNotesController : ControllerBase
 {
     private readonly ILogger<ReleaseNotesController> _logger;
     private readonly IPtsServiceClient _ptsServiceClient;
