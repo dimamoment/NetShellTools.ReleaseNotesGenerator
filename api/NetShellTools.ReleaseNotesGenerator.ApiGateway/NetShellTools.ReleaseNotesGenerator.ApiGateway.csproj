@@ -13,4 +13,8 @@
       <ProjectReference Include="..\..\clients\NetShellTools.ReleaseNotesGenerator.PTS.Service.Client\NetShellTools.ReleaseNotesGenerator.PTS.Service.Client.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Models\ReleaseNotesController\" />
+    </ItemGroup>
+
 </Project>

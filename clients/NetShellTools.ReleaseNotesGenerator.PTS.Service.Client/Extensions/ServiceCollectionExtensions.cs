@@ -9,7 +9,7 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection AddPtsServiceClient(this IServiceCollection services, IConfiguration configuration)
     {
         var serviceConfig = configuration.GetSection(PtsServiceConfiguration.SectionName).Get<PtsServiceConfiguration>();
-        ArgumentNullException.ThrowIfNull(serviceConfig);
+        ArgumentNullException.ThrowIfNull(serviceConfig?.ServiceUrl);
 
         services.AddScoped<IPtsServiceClient, PtsServiceClient>();
         services.AddHttpClient<IPtsServiceClient, PtsServiceClient>(client =>

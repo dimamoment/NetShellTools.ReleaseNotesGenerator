@@ -10,13 +10,15 @@ internal sealed class ReleaseNotesController : ControllerBase
     private readonly ILogger<ReleaseNotesController> _logger;
     private readonly IPtsServiceClient _ptsServiceClient;
     
-    public ReleaseNotesController(ILogger<ReleaseNotesController> logger, IPtsServiceClient ptsServiceClient)
+    public ReleaseNotesController(
+        ILogger<ReleaseNotesController> logger,
+        IPtsServiceClient ptsServiceClient)
     {
         _logger = logger;
         _ptsServiceClient = ptsServiceClient;
     }
 
-    [HttpGet]
+    [HttpGet("azure")]
     public async Task<IActionResult> Get(CancellationToken cancellationToken)
     {
         return Ok();
