@@ -6,7 +6,7 @@ using NetShellTools.ReleaseNotesGenerator.PTS.Service.Models.AzureDevopsControll
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace NetShellTools.ReleaseNotesGenerator.PTS.Service.Service.Internal;
+namespace NetShellTools.ReleaseNotesGenerator.PTS.Service.Services.Internal;
 
 internal sealed class AzureDevopsService : IAzureDevopsService
 {

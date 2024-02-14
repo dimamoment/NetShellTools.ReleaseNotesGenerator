@@ -1,6 +1,6 @@
 using NetShellTools.ReleaseNotesGenerator.PTS.Service.Models.AzureDevopsController;
 
-namespace NetShellTools.ReleaseNotesGenerator.PTS.Service.Service;
+namespace NetShellTools.ReleaseNotesGenerator.PTS.Service.Services;
 
 public interface IAzureDevopsService
 {

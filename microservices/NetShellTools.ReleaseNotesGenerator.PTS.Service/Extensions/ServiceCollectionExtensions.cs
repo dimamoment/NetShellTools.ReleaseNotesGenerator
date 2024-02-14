@@ -1,6 +1,6 @@
 using NetShellTools.ReleaseNotesGenerator.PTS.Service.Dto;
-using NetShellTools.ReleaseNotesGenerator.PTS.Service.Service;
-using NetShellTools.ReleaseNotesGenerator.PTS.Service.Service.Internal;
+using NetShellTools.ReleaseNotesGenerator.PTS.Service.Services;
+using NetShellTools.ReleaseNotesGenerator.PTS.Service.Services.Internal;
 
 namespace NetShellTools.ReleaseNotesGenerator.PTS.Service.Extensions;
 

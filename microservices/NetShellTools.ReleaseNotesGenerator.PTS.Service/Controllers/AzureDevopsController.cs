@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using NetShellTools.ReleaseNotesGenerator.PTS.Service.Models.AzureDevopsController;
 using NetShellTools.ReleaseNotesGenerator.PTS.Service.Service;
+using NetShellTools.ReleaseNotesGenerator.PTS.Service.Services;
 
 namespace NetShellTools.ReleaseNotesGenerator.PTS.Service.Controllers;
 
