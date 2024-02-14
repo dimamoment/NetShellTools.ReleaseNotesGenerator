@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using NetShellTools.ReleaseNotesGenerator.PTS.Service.Models.AzureDevopsController;
 using NetShellTools.ReleaseNotesGenerator.PTS.Service.Service;
 
 namespace NetShellTools.ReleaseNotesGenerator.PTS.Service.Controllers;
@@ -19,13 +20,14 @@ public sealed class AzureDevopsController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> GetWorkItems(CancellationToken cancellationToken)
+    public async Task<IActionResult> GetWorkItems([FromBody] WorkItemsRequest request, CancellationToken cancellationToken)
     {
         _logger.LogInformation("AzureDevOps PTS: GetWorkItems endpoint PTS has been executed");
-        
-        
+
+        var result = await _azureDevopsService.GetWorkItemsAsync(request);
         
         _logger.LogInformation("AzureDevOps PTS: GetWorkItems endpoint PTS has been finished");
-        return Ok();
+
+        return Ok(result);
     }
 }
