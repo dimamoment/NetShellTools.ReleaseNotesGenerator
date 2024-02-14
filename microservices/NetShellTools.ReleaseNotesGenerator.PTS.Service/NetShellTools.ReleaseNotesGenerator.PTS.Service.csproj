@@ -9,4 +9,12 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Identity.Client" Version="4.59.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\common\NetShellTools.ReleaseNotesGenerator.Common\NetShellTools.ReleaseNotesGenerator.Common.csproj" />
+    </ItemGroup>
+
 </Project>

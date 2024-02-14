@@ -5,7 +5,7 @@ namespace NetShellTools.ReleaseNotesGenerator.ApiGateway.Controller;
 
 [ApiController]
 [Route("api/release-notes")]
-internal sealed class ReleaseNotesController : ControllerBase
+public sealed class ReleaseNotesController : ControllerBase
 {
     private readonly ILogger<ReleaseNotesController> _logger;
     private readonly IPtsServiceClient _ptsServiceClient;
@@ -19,7 +19,7 @@ internal sealed class ReleaseNotesController : ControllerBase
     }
 
     [HttpGet("azure")]
-    public async Task<IActionResult> Get(CancellationToken cancellationToken)
+    public async Task<IActionResult> GetReleaseNotes(CancellationToken cancellationToken)
     {
         return Ok();
     }
