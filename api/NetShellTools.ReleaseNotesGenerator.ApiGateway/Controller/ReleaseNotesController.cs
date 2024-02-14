@@ -19,7 +19,7 @@ public sealed class ReleaseNotesController : ControllerBase
     }
 
     [HttpGet("azure")]
-    public async Task<IActionResult> Get(CancellationToken cancellationToken)
+    public async Task<IActionResult> GetReleaseNotes(CancellationToken cancellationToken)
     {
         return Ok();
     }
