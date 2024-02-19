@@ -1,6 +1,6 @@
 namespace NetShellTools.ReleaseNotesGenerator.PTS.Service.Dto;
 
-public record AzureDevopsClientConfig
+public sealed record AzureDevopsClientConfig
 {
     public const string SectionName = "AzureDevopsClientConfig";
     

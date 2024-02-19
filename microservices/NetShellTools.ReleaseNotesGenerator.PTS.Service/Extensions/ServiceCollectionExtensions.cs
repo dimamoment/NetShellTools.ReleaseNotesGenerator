@@ -10,7 +10,10 @@ public static class ServiceCollectionExtensions
     {
         services.Configure<AzureDevopsClientConfig>(configuration.GetSection(AzureDevopsClientConfig.SectionName));
         var adoConfig = configuration.GetSection(AzureDevopsClientConfig.SectionName).Get<AzureDevopsClientConfig>();
-        ArgumentNullException.ThrowIfNull(adoConfig?.TenantId);
+        
+        ArgumentException.ThrowIfNullOrEmpty(adoConfig?.TenantId);
+        ArgumentException.ThrowIfNullOrEmpty(adoConfig?.ClientId);
+        ArgumentException.ThrowIfNullOrEmpty(adoConfig?.Secret);
         
         services.AddScoped<IAzureDevopsService, AzureDevopsService>();
         services.AddHttpClient<IAzureDevopsService, AzureDevopsService>(client =>
