@@ -10,10 +10,12 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\clients\NetShellTools.ReleaseNotesGenerator.OpenAI.Service.Client\NetShellTools.ReleaseNotesGenerator.OpenAI.Service.Client.csproj" />
       <ProjectReference Include="..\..\clients\NetShellTools.ReleaseNotesGenerator.PTS.Service.Client\NetShellTools.ReleaseNotesGenerator.PTS.Service.Client.csproj" />
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="13.0.1" />
       <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     </ItemGroup>
 
