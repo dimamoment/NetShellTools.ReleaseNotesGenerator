@@ -1,3 +1,5 @@
+using NetShellTools.ReleaseNotesGenerator.ApiGateway.Mappings;
+using NetShellTools.ReleaseNotesGenerator.OpenAI.Service.Client.Extensions;
 using NetShellTools.ReleaseNotesGenerator.PTS.Service.Client.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,7 +10,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddAutoMapper(typeof(ApiGatewayProfile));
 builder.Services.AddPtsServiceClient(builder.Configuration);
+builder.Services.AddOpenAiServiceClient(builder.Configuration);
 
 // Configure the HTTP request pipeline.
 var app = builder.Build();

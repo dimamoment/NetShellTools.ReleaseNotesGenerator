@@ -2,16 +2,20 @@
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
-        <AssemblyName>NetShellTools.ReleaseNotesGenerator.PTS.Service.Client</AssemblyName>
-        <RootNamespace>NetShellTools.ReleaseNotesGenerator.PTS.Service.Client</RootNamespace>
+        <AssemblyName>NetShellTools.ReleaseNotesGenerator.OpenAI.Service.Client</AssemblyName>
+        <RootNamespace>NetShellTools.ReleaseNotesGenerator.OpenAI.Service.Client</RootNamespace>
         <Company>NetShellTools</Company>
         <Product>NetShellTools.ReleaseNotesGenerator</Product>
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
-      <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Models\Response\" />
     </ItemGroup>
 
     <ItemGroup>
