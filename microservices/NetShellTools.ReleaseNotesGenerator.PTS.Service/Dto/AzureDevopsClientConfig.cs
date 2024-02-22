@@ -12,6 +12,8 @@ public sealed record AzureDevopsClientConfig
     
     public string Secret { get; init; }
     
+    public string Organization { get; init; }
+    
     public string AuthUrlBase { get; init; }
     
     public string AzureDevopsUrlBase { get; init; }

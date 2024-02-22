@@ -14,11 +14,13 @@ public static class ServiceCollectionExtensions
         ArgumentException.ThrowIfNullOrEmpty(adoConfig?.TenantId);
         ArgumentException.ThrowIfNullOrEmpty(adoConfig?.ClientId);
         ArgumentException.ThrowIfNullOrEmpty(adoConfig?.Secret);
+        ArgumentException.ThrowIfNullOrEmpty(adoConfig?.Organization);
         
         services.AddScoped<IAzureDevopsService, AzureDevopsService>();
         services.AddHttpClient<IAzureDevopsService, AzureDevopsService>(client =>
         {
-            client.BaseAddress = new Uri(adoConfig.AzureDevopsUrlBase);
+            var baseUri = $"{adoConfig.AzureDevopsUrlBase}{adoConfig.Organization}";
+            client.BaseAddress = new Uri(baseUri);
         });
         
         return services;

@@ -4,6 +4,9 @@ namespace NetShellTools.ReleaseNotesGenerator.PTS.Service.Models.AzureDevopsCont
 
 public record WorkItem
 {
+    [JsonProperty("System.WorkItemType")]
+    public string WorkItemType { get; set; }
+    
     [JsonProperty("System.Title")]
     public string Title { get; init; }
     

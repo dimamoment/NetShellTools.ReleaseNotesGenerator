@@ -5,9 +5,6 @@ namespace NetShellTools.ReleaseNotesGenerator.ApiGateway.Models.ReleaseNotesCont
 public record GenerateReleaseNotesRequest
 {
     [Required]
-    public string Organization { get; init; }
-    
-    [Required]
     public string ApiVersion { get; init; }
     
     [Required]
