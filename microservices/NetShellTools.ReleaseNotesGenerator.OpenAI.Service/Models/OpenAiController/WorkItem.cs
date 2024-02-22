@@ -5,8 +5,10 @@ namespace NetShellTools.ReleaseNotesGenerator.OpenAI.Service.Models.OpenAiContro
 public record WorkItem
 {
     [Required]
-    public string Title { get; init; }
-
+    public string WorkItemType { get; set; }
+    
     [Required]
+    public string Title { get; init; }
+    
     public string Description { get; init; }
 }

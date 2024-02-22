@@ -46,7 +46,7 @@ internal sealed class AzureDevopsService : IAzureDevopsService
         
         var requestMessage = new HttpRequestMessage
         {
-            RequestUri = new Uri($"{_httpClient.BaseAddress}/{request.Organization}/_apis/wit/workitemsbatch?api-version={request.ApiVersion}"),
+            RequestUri = new Uri($"{_httpClient.BaseAddress}/_apis/wit/workitemsbatch?api-version={request.ApiVersion}"),
             Method = HttpMethod.Post,
         };
         

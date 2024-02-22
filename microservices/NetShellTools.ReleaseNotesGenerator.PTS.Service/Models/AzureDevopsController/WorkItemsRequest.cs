@@ -5,9 +5,6 @@ namespace NetShellTools.ReleaseNotesGenerator.PTS.Service.Models.AzureDevopsCont
 public record WorkItemsRequest
 {
     [Required]
-    public string Organization { get; init; }
-    
-    [Required]
     public string ApiVersion { get; init; }
     
     [Required]

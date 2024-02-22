@@ -23,18 +23,20 @@ internal sealed class OpenAiService : IOpenAiService
         var systemPrompt = "You are a release engineer in a software company." +
                            "Your task is to create release notes based on the work item title and description." +
                            "You will be given a collection of objects that represent a work item." +
-                           "An object has two fields: title and description." +
-                           "Based on those values, you should create release notes. Please keep each note short, 1-line sentences.";
+                           "An object has two fields: title, description and type of the work item. (The description field is optional)" +
+                           "Based on those values, you should create release notes. Please keep each note short, 1-line sentences " +
+                           "and don't include work item type to generated result.";
 
         if (!string.IsNullOrEmpty(request.ReleaseName))
         {
-            systemPrompt = $" Also add a {request.ReleaseName} as a title/summary of release notes.";
+            systemPrompt = $" Also add: '{request.ReleaseName}' as a title/summary of release notes.";
         }
 
         chat.AppendSystemMessage(systemPrompt);
         request.WorkItems.ForEach(item =>
         {
-            chat.AppendUserInput($"Title: {item.Title}; Description: {item.Description}");
+            var workItemDescription = !string.IsNullOrEmpty(item.Description) ? $"; Description: {item.Description}" : "";
+            chat.AppendUserInput($"Title: {item.Title}{workItemDescription}; Work item type: {item.WorkItemType}");
         });
         
         _logger.LogInformation("GenerateReleaseNotesAsync finished.");
