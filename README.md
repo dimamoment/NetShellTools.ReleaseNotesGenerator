@@ -1,4 +1,4 @@
-#Automated Release Notes Generator
+Automated Release Notes Generator
 
 A microservices-based application designed to automate the creation of release notes based on Azure DevOps ticket data. The application has three independent microservices, which can also operate independetly:
 
